@@ -28,13 +28,21 @@
 		font-weight:300;
 	}
 	
-	table,td,th
-	{
-	border:0.1px solid black;
-	}
 	table
 	{
-		width:100%;
+	width: 100%;
+  	border: 1px solid #999;
+  	border-collapse: collapse;
+  	caption-side: top;
+	}
+
+	caption, td, th {
+	  padding: 0.3em;
+	}
+
+	caption {
+	  font-weight: bold;
+	  font-style: italic;
 	}
 	th
 	{
@@ -138,20 +146,18 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	hr {
+	  border-style: inset;
+	  border-width: 1px;
 	}
+	
 
 	figcaption {
 	  padding: 0.5em;
 	  color: rgba(0, 0, 0, 0.6);
 	  font-size: 12px;
 	  line-height: 1.5em;
-	  text-align: left;
+	  text-align: center;
 	}
 
 	dt-article figcaption {
@@ -193,56 +199,48 @@
 
 <body>
 	<div style="text-align: center;">
-	<table style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
+	<table border="0" bgcolor="#000000" style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
 	<td style="width: 50%;border: 0px solid transparent;"><video src="assets/mp4/zig-zag(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 50%;border: 0px solid transparent;"><video src="assets/mp4/real_world_lane_following.mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	</tr></table>
 
 	</div>
 
+
 	<br>
 
 	<h1>Robust Sim2Real transfer with deep reinforcement learning for Autonomous vehicles</h1>
 	<p></p>
 
-	<center>
-			<table align=center width=600px>
-				<tr>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=i65JnxwAAAAJ&hl=en&oi=ao">Dianzhao Li</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://scholar.google.com/citations?hl=en&user=1uTLlNUAAAAJ&view_op=list_works">Ostap Okhrin</a></span>
-						</center>
-					</td>
-				</tr>
-			</table>
-			<table align=center width=250px>
-				<tr>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
-						</center>
-					</td>
-				</tr>
-			</table>
-		</table>
-	</center>
+	
 
-	<center>
-		<table align=center width=850px>
-			<tr>
-				<td width=260px>
-					<center>
-						<img class="round" style="width:500px" src="./assets/img/duckies_equal.jpg"/>
-					</center>
-				</td>
-			</tr>
-		</table>
-	</center>
+    <p class="author"><a href="https://scholar.google.com/citations?user=i65JnxwAAAAJ&hl=en&oi=ao/">Dianzhao Li</a><sup>1*</sup>, <a href="https://scholar.google.com/citations?hl=en&user=1uTLlNUAAAAJ&view_op=list_works">Ostap Okhrin</a><sup>1</sup>
+
+	<p><sup>1</sup> <a href="https://tu-dresden.de/bu/verkehr/ivw/osv">Chair of Econometrics and Statistics, esp. in the Transport Sector</a>, Technische Universität Dresden,Dresden, Germany<br>
+	<sup>*</sup> Corresponding author: dianzhao.li@tu-dresden.de</p>
+
+	<p>Paper Link: <a href="https://www.science.org/doi/10.1126/scirobotics.abk2822">Paper Link</a><br>
+	arXiv: <a href="https://arxiv.org/abs/2201.08117">arXiv</a><br>
+
+	<details>
+	  <summary>Cite (Bibtex)</summary>
+	  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{doi:10.1126/scirobotics.abk2822,
+	author = {Takahiro Miki  and Joonho Lee  and Jemin Hwangbo  and Lorenz Wellhausen  and Vladlen Koltun  and Marco Hutter },
+	title = {Learning robust perceptive locomotion for quadrupedal robots in the wild},
+	journal = {Science Robotics},
+	volume = {7},
+	number = {62},
+	pages = {eabk2822},
+	year = {2022},
+	doi = {10.1126/scirobotics.abk2822},
+
+	URL = {https://www.science.org/doi/abs/10.1126/scirobotics.abk2822},
+	eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.abk2822},
+	}
+	</code></pre></div>  </div>
+	</details>
+	<p><br></p>
+
 
 	<hr>
 
@@ -250,11 +248,24 @@
 	<h2>Abstract</h2>
 	<p style="font-family: Helvetica">Deep Reinforcement Learning (DRL) has provided inspiring solutions to various complex tasks in different research fields, but the application of DRL agents to the real world is still a challenge due to the established discrepancies between the simulation and the real world. In this work, we propose a DRL framework to train a lane following and overtaking agent in the simulation that can be transferred to the real-world environment effectively with minimal effort. For evaluation, we designed different driving scenarios in the simulation and real-world environment to assess the lane following and overtaking capabilities of the DRL agent and compare the proposed agent with other baselines. With the proposed framework, the Sim2Real gap is narrowed, thus, the trained agent can drive the vehicle with similar performance in simulation and its real counterpart.</p>
 
+	<br>
+
+	<center>
+		<figure class="round">
+		  	<img style="width:500px" src="./assets/img/duckies_equal.jpg" alt="Exteroceptive challenges">
+		  	<figcaption>
+		    Animations of unreliable exteroception.
+		    </figcaption>
+		</figure>
+    </center>
+
+	<br>
 	<hr>
 
 
 
-	<h2>Results</h2>
+	<h2 id="results">Results</h2>
+	<h3 id="lane following">Lane Following</h3>
 
 
 	<table>
@@ -426,7 +437,8 @@
 	      <td><b>0.00</b></td>
 	    </tr>
 	  </tbody>
-</table>
+	</table>
+	<br>
 	<hr>
 	<br>
 	<p style="font-family: Helvetica">
@@ -435,13 +447,13 @@
 	<br>
 
 
-	<table style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
+	<table border="0" bgcolor="#000000" style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/normal1(slow).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/normal2(slow).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/plus(slow).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	</tr></table>
 
-	<table style="width: 66%;" cellspacing="0" cellpadding="0"><tr>
+	<table border="0" bgcolor="#000000" style="width: 66%;" cellspacing="0" cellpadding="0"><tr>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/zig-zag(slow).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/v(slow).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	</tr></table>
@@ -452,13 +464,13 @@
 	</p>
 	<br>
 
-	<table style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
+	<table border="0" bgcolor="#000000" style="width: 100%;" cellspacing="0" cellpadding="0"><tr>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/normal1(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/normal2(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/plus(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	</tr></table>
 
-	<table style="width: 66%;" cellspacing="0" cellpadding="0"><tr>
+	<table border="0" bgcolor="#000000" style="width: 66%;" cellspacing="0" cellpadding="0"><tr>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/zig-zag(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	<td style="width: 25%;border: 0px solid transparent;"><video src="assets/mp4/v(fast).mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
 	</tr></table>
