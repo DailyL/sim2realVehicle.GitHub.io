@@ -456,7 +456,7 @@
 
 	    <tfoot style="width:50%">
 	    	<tr>
-	    		<td colspan="5" style="text-align: left;">[1] By adjusting the scale of action output, we can switch between fast and slow driving modes. 
+	    		<td colspan="5" style="text-align: left;font-size: 14px;">[1] By adjusting the scale of action output, we can switch between fast and slow driving modes. 
 	    		<br>[2] The PID baseline utilizes the exact information from the simulator, which is not available for the other agents.
 	    		<br>[3] The maximum evaluation time in one episode is 60s.
 	    		</td>
@@ -558,7 +558,7 @@
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:gold;"></i> First Place (Fabian) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:silver;"></i> Second place (Niklas) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:brown;"></i> Third Place (Ostap) </th>
-	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent </th>
+	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent<sup>*</sup></th>
 
 	    </tr>
 	  </thead>
@@ -621,7 +621,7 @@
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:gold;"></i> First Place (Ostap) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:silver;"></i> Second place (Niels)</th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:brown;"></i> Third Place (Niklas)</th>
-	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent </th>
+	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent<sup>*</sup> </th>
 
 	    </tr>
 	  </thead>
@@ -684,7 +684,7 @@
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:gold;"></i> First Place (Niklas) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:silver;"></i> Second place (Fabian)</th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:brown;"></i> Third Place (Niels)</th>
-	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent </th>
+	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent<sup>*</sup> </th>
 
 	    </tr>
 	  </thead>
@@ -747,7 +747,7 @@
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:gold;"></i> First Place (Niklas) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:silver;"></i> Second place (Niels)</th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:brown;"></i> Third Place (Fabian)</th>
-	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent </th>
+	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent<sup>*</sup> </th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -809,7 +809,7 @@
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:gold;"></i> First Place (Niklas) </th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:silver;"></i> Second place (Niels)</th>
 	      <th style="width:15%"> <i class="fa fa-trophy" aria-hidden="true" style="color:brown;"></i> Third Place (Ankit)</th>
-	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent </th>
+	      <th style="width:15%"> <i class="fa fa-android" aria-hidden="true"></i> DRL agent<sup>*</sup> </th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -856,6 +856,12 @@
 	      <td>1.48</td>
 	    </tr>
 	  </tbody>
+	  <tfoot style="width:40%">
+	    	<tr>
+	    		<td colspan="5" style="text-align: left; font-size: 13px;">* The final score of the DRL agent is based on the median value of each metric, while for human players the best performance is utilized to compute the final score. 
+	    		</td>
+	    	</tr>
+		</tfoot>
 	</table>
 
 	<figcaption style="text-align: left;font-size: 16px;">
@@ -866,6 +872,12 @@
 	<hr>
 
 	<h3 id="overtaking"> &#x2713; Overtaking</h3>
+
+	<table border="0" bgcolor="#FFFFFF" style="width: 70%;" cellspacing="0" cellpadding="0"><tr>
+	<td style="width: 35%;border: 0px solid transparent;"><video src="assets/mp4/simulation/overtaking/overtaking_normal1_short.mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
+	<td style="width: 35%;border: 0px solid transparent;"><video src="assets/mp4/simulation/overtaking/overtaking_normal2_short.mp4" type="video/mp4" autoplay muted playsinline loop style="margin: 0; width: 100%;" ></video></td>
+	</tr></table>
+
 
 	<br>
 
